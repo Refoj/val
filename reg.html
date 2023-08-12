@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .form-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .input-field {
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+
+  .input-field input:focus {
+    border-color: #3498db;
+  }
+
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .input-field.invalid .error-message {
+    opacity: 1;
+  }
+
+  .submit-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .submit-button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Register Now</h2>
+  <form id="registrationForm">
+    <div class="input-field">
+      <input type="text" id="username" name="username" placeholder="Username">
+      <div class="error-message" id="usernameError"></div>
+    </div>
+
+    <div class="input-field">
+      <input type="email" id="email" name="email" placeholder="Email">
+      <div class="error-message" id="emailError"></div>
+    </div>
+
+    <div class="input-field">
+      <input type="password" id="password" name="password" placeholder="Password">
+      <div class="error-message" id="passwordError"></div>
+    </div>
+
+    <div class="input-field">
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+      <div class="error-message" id="confirmPasswordError"></div>
+    </div>
+
+    <button type="submit" class="submit-button">Register</button>
+  </form>
+</div>
+
+<script>
+// Similar validation and error handling code as in the previous example
+// ...
+</script>
+
+</body>
+</html>
